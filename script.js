@@ -58,23 +58,35 @@ para.innerText = 'ninjas are awesome!';
 // })
 
 
-const link = document.querySelector('a');
-console.log(link.getAttribute('href'));
-link.setAttribute('href', 'https://www.thenetninja.co.uk');
-link.innerText = 'The Net Ninja website';
+// const link = document.querySelector('a');
+// console.log(link.getAttribute('href'));
+// link.setAttribute('href', 'https://www.thenetninja.co.uk');
+// link.innerText = 'The Net Ninja website';
 
-const msg = document.querySelector('p');
-console.log(msg.getAttribute('class'));
-msg.setAttribute('class', 'success');
-console.log(msg);
+// const msg = document.querySelector('p');
+// console.log(msg.getAttribute('class'));
+// msg.setAttribute('class', 'success');
+// console.log(msg);
 
 // Adding a new attribute using the setAttribute method
-msg.setAttribute('style', 'color: green');
+// msg.setAttribute('style', 'color: green');
 
 
+// Adding and removing classes
+const paras = document.querySelectorAll('p');
 
+paras.forEach(para => {
+    if(para.innerText.includes('error')){
+        para.classList.add('error');
+    }
+    if(para.innerText.includes('success')){
+        para.classList.add('success');
+    }
+})
+// console.log(paras);
 
-
+const title = document.querySelector('.page-title');
+title.classList.toggle('test');
 
 
 
