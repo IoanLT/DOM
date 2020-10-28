@@ -35,8 +35,8 @@
 
 
 
-const para = document.querySelector('p');
-para.innerText = 'ninjas are awesome!';
+// const para = document.querySelector('p');
+// para.innerText = 'ninjas are awesome!';
 // console.log(para.innerText);
 
 // Changing the text on several elements
@@ -73,20 +73,55 @@ para.innerText = 'ninjas are awesome!';
 
 
 // Adding and removing classes
-const paras = document.querySelectorAll('p');
+// const paras = document.querySelectorAll('p');
 
-paras.forEach(para => {
-    if(para.innerText.includes('error')){
-        para.classList.add('error');
-    }
-    if(para.innerText.includes('success')){
-        para.classList.add('success');
-    }
-})
+// paras.forEach(para => {
+//     if(para.innerText.includes('error')){
+//         para.classList.add('error');
+//     }
+//     if(para.innerText.includes('success')){
+//         para.classList.add('success');
+//     }
+// })
 // console.log(paras);
 
-const title = document.querySelector('.page-title');
-title.classList.toggle('test');
+// const title = document.querySelector('.page-title');
+// title.classList.toggle('test');
+
+
+// Parent child elements
+
+// const article = document.querySelector('article');
+
+// console.log(article.children);
+// Array.from(article.children).forEach(child => {
+//     child.classList.add('article-element');
+// });
+
+// const title = document.querySelector('h2');
+
+// console.log(title.parentElement.parentElement);
+// console.log(title.nextElementSibling);
+// console.log(title.previousElementSibling);
+
+
+// Click Events
+
+const button = document.querySelector('button');
+
+button.addEventListener('click', () => {
+    console.log('you clicked me');
+});
+
+const items = document.querySelectorAll('li');
+
+items.forEach(item => {
+    item.addEventListener('click', event => {
+        // console.log('item clicked');
+        // console.log(event.target);
+        event.target.style.textDecoration = 'line-through';
+    })
+})
 
 
 
